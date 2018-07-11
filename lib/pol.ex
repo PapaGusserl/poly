@@ -1,18 +1,17 @@
 defmodule Pol do
   @moduledoc """
-  Documentation for Pol.
+  Данный модуль предназначен для обучения тестированию
   """
-
   @doc """
-  Hello world.
 
+  Эта функция принимает на входе строку и возвращает true, если строка - полиндром
   ## Examples
 
-      iex> Pol.hello
-      :world
+     iex> Pol.is_polyndrom?("garag")
+     true
 
   """
-  def hello do
-    :world
-  end
+
+  def is_polyndrom?(str), do: str == String.reverse(str)
+
 end
