@@ -1,4 +1,6 @@
 defmodule Pal do
+  require Logger
+
   @moduledoc """
   Данный модуль предназначен для обучения тестированию
   """
@@ -7,11 +9,17 @@ defmodule Pal do
   Эта функция принимает на входе строку и возвращает true, если строка - полиндром
   ## Examples
 
-     iex> Pal.is_palyndrom?("garag")
+     iex> Pal.is_polyndrom?("garag")
      true
 
   """
 
-  def is_palyndrom?(str), do: str == String.reverse(str)
+  def is_palyndrom?(str) do
+    str = str |> ignore_whitespace |> ignore_case
+    str == String.reverse(str)
+  end
+
+  defp ignore_whitespace(str), do: String.replace(str, " ", "")
+  defp ignore_case(str),       do: String.downcase(str)
 
 end
