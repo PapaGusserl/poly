@@ -1,4 +1,4 @@
-defmodule Pol do
+defmodule Pal do
   @moduledoc """
   Данный модуль предназначен для обучения тестированию
   """
@@ -7,11 +7,11 @@ defmodule Pol do
   Эта функция принимает на входе строку и возвращает true, если строка - полиндром
   ## Examples
 
-     iex> Pol.is_polyndrom?("garag")
+     iex> Pal.is_palyndrom?("garag")
      true
 
   """
 
-  def is_polyndrom?(str), do: str == String.reverse(str)
+  def is_palyndrom?(str), do: str == String.reverse(str)
 
 end
