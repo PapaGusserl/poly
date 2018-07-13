@@ -9,10 +9,16 @@ defmodule Pal do
   Эта функция принимает на входе строку и возвращает true, если строка - полиндром
   ## Examples
 
-     iex> Pal.is_polyndrom?("garag")
+     iex> Pal.is_palyndrom?("garag")
      true
 
   """
+
+  @spec is_palyndrom?(String.t()) :: bool | {:error, atom}
+
+  def is_palyndrom?(str) when length(str) == 0, do: {:error, :string_is_empty}
+
+
 
   def is_palyndrom?(str) do
     str = str |> ignore_whitespace |> ignore_symbols |> ignore_case
