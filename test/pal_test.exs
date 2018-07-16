@@ -33,6 +33,8 @@ defmodule PalTest do
       assert Pal.is_palyndrom?("А лис, он умен — крыса сыр к нему носила.")==true
     end
 
+    ## это не палиндром посимвольный, а полиндром по словам) Это задаток для
+    #нового функционала, но сейчас он будет выдавать лишь false
     test"valid request_3" do
         assert Pal.is_palyndrom?("King, are you glad you are king?")==true
     end
